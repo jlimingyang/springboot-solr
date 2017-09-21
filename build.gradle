@@ -1,0 +1,61 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-gradle-plugin
+    compile group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-tomcat
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-hateoas
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-cache
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/com.alibaba/druid
+    compile group: 'com.alibaba', name: 'druid', version: '1.1.3'
+    // https://mvnrepository.com/artifact/org.quartz-scheduler/quartz
+    compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.3.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework/spring-context-support
+    compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.11.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '1.5.7.RELEASE'
+    // https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper
+    compile group: 'com.github.pagehelper', name: 'pagehelper', version: '5.1.2'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-solr
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-solr', version: '1.5.7.RELEASE'
+
+
+}
