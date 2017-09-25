@@ -41,7 +41,7 @@ spring:
 
   data:
     solr:
-      host: http://localhost:8983/solr/mark
+      host: http://localhost:8000/solr/
       zk-host:
       repositories:
         enabled: true
